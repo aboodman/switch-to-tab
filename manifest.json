@@ -1,10 +1,15 @@
 {
-  "name": "Switch to Tab",
-  "description": "Use the omnibox to search your tabs!",
-  "version": "3",
+  "name": "Search Tab in Chrome's Omnibox",
+  "short_name": "Search Tab",
+  "default_locale" : "en",
+  "description": "Use the 'tab' keyword in Chrome's omnibox to search your tabs! (fork of 'switch to tab')",
+  "version": "10",
+  "author": "aboodman then jean-michel fayard",
   "permissions": ["tabs"],
   "omnibox": {
     "keyword": "tab"
   },
+  "manifest_version": 2,
   "background_page": "background.html"
+
 }

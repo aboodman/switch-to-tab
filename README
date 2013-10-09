@@ -12,6 +12,7 @@ Upon pressing enter, the extension will select the first match and switch to
 that tab, so one need not type press down if the first match is desired.
 
 How to use it ? Install it from Chrome's WebStore
+https://chrome.google.com/webstore/detail/search-tab-in-chromes-omn/jcadgemecbojhfgpnbgakadhbmibflnd
 
 
 == History
@@ -31,9 +32,11 @@ Sadly enough, after discussing with aboodman, I understood that it was not possi
 
 Hence this fork.
 
-==
+
+== Who made this extension ?
+
 Authors :
 - aboodman
 - Jean-Michel Fayard
-Free as in Freedom License : MIT
+Free as in Freedom License 
 GitHub : https://github.com/internaciulo/search-tab-in-chrome-s-omnibox

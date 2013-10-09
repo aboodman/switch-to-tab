@@ -1,8 +1,9 @@
-Switch to tab is an extension for Google Chrome.
+Search Tab in Chrome's omnibox is a fork from 'Switch to tab',  an extension for Google Chrome.
 
-Switch to tab's license is as follows:
+Search Tab in Chrome's omnibox has the same licence as Switch to tab :
 
 Copyright (c) 2010 Frank Yan, <http://frankyan.com>
+Copyright (c) 2013 Jean-Michel Fayard, <jean-michel.fayard AT bertrou.eu>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
