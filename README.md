@@ -1,6 +1,6 @@
-== Why and How you can use this Chrome Extension 
+## Purpose of this Chrome's extension
 
-Scenario : you begin to browse the web with Chrome for a while ; soon you need to go back to *that* tab but there are too many tabs to find quickly exactly the one you need. Sound familiar ? We know we have been there.
+Scenario : you begin to browse the web with Chrome for a while ; soon you need to go back to *that* tab but there are too many tabs to find quickly exactly the one you need. Sound familiar ? We know, we have been there.
 
 Don't worry, to solve this *too many tabs* problem, there are a lot of complicated extensions that promise you that you will be able to work with hundreds of tabs : *Too Many Tabs, Tabs Outliner, Bookmark My Tabs, One Tab, TabMan Tabs Manger, Tab Manager, Project Tab Manger, 10+Tabs MASTER →Fast Speed Scroll w/LATER Tab, Resolver Tabs, Tab out, TabJump, TabCaroussel, IE Tab Multi*
  
@@ -12,10 +12,9 @@ Upon pressing enter, the extension will select the first match and switch to
 that tab, so one need not type press down if the first match is desired.
 
 How to use it ? Install it from Chrome's WebStore
-https://chrome.google.com/webstore/detail/search-tab-in-chromes-omn/jcadgemecbojhfgpnbgakadhbmibflnd
 
 
-== History
+## History
 
 (‘Switch to tab’](https://chrome.google.com/webstore/detail/switch-to-tab/gbfhhcljihbgcobpfnceegfmooomhhli) was the result of (aboodman](https://github.com/aboodman/switch-to-tab
 )  playing around with Chromium's experimental
@@ -32,11 +31,10 @@ Sadly enough, after discussing with aboodman, I understood that it was not possi
 
 Hence this fork.
 
+## Things to know
 
-== Who made this extension ?
+- Initial author : aboodman
+- Actual maintener Jean-Michel Fayard
+- Releaser under a Free as in Freedom License (see LICENCE)
+- GitHub : https://github.com/internaciulo/search-tab-in-chrome-s-omnibox
 
-Authors :
-- aboodman
-- Jean-Michel Fayard
-Free as in Freedom License 
-GitHub : https://github.com/internaciulo/search-tab-in-chrome-s-omnibox
