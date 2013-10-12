@@ -1,15 +1,36 @@
 {
-  "name": "Search Tab in Chrome's Omnibox",
-  "short_name": "Search Tab",
+  "name": "__MSG_name__", // "Search Tab in Chrome's Omnibox" in english
+  "description": "__MSG_description__",
+
+  //NOTE: for everything that looks like __MSG_some_thing__, look into _locales/xx/messages.json
+  //NOTE: Documentation is here http://developer.chrome.com/extensions/i18n.html
+
+  "author": "aboodman, jmfayard", // aboodman original author of "Switch to Tab". jmfayard had to fork it
+  "manifest_version": 2, // was 1 before the fork
+  "version": 12, // first version that may work more or less with manifest_version 2
+
   "default_locale" : "en",
-  "description": "Use the 'tab' keyword in Chrome's omnibox to search your tabs! (fork of 'switch to tab')",
-  "version": "10",
-  "author": "aboodman then jean-michel fayard",
   "permissions": ["tabs"],
   "omnibox": {
     "keyword": "tab"
   },
-  "manifest_version": 2,
-  "background_page": "background.html"
+
+  // manifest_version 1 is not allowed anymore, and background_page is deprecated
+  // Tutorial here: http://developer.chrome.com/extensions/tut_migration_to_manifest_v2.html
+  "background": {
+      "scripts":["background.js"] // all the magic is in this javascript file
+  }
+
+  //  "short_name": "__MSG_short_name__",
+  // TODO: I don't get it, this key is valid according to the doc http://developer.chrome.com/extensions/manifest.html
+  //but Chrome keep saying : Unrecognized manifest key 'short_name'.
+
+  // TODO: it would be great to have an icon. But it would looks weird if *I* do the icon.
+  //"icons": {
+  //  "16": "16-full-color.png"
+  //},
+  
+
+  //TODO: Google says we should consider to move to an Event Page instead. Not sure if it makes sense for us http://developer.chrome.com/extensions/event_pages.html
 
 }
