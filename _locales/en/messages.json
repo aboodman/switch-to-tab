@@ -7,11 +7,12 @@
     "message": "Search Tab",
     "description": "This is the long name of the app in Chrome's Webstore"
   },
-  // 
   "description": {
     "message": "Use the 'tab' keyword in Chrome's omnibox to search your tabs! (fork of 'switch to tab')",
     "description": "This is the description of the app that must declared in manifest.json"
   },
+
+
   "search_string": {
     "message": "hello%20world",
     "description": "The string we search for. Put %20 between words that go together."

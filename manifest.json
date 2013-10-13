@@ -1,25 +1,40 @@
 {
-  "name": "__MSG_name__", // "Search Tab in Chrome's Omnibox" in english
+  "name": "__MSG_name__", // {en}: "Search Tab in Chrome's Omnibox" 
   "description": "__MSG_description__",
 
-  //NOTE: for everything that looks like __MSG_some_thing__, look into _locales/xx/messages.json
-  //NOTE: Documentation is here http://developer.chrome.com/extensions/i18n.html
+  //NOTE: everything that looks like __MSG_some_thing__  is a string that can be translated in _locales/xx/messages.json
+  //TRANSLATORS look for explanations in the file named "TRANSLATORS" 
 
-  "author": "aboodman, jmfayard", // aboodman original author of "Switch to Tab". jmfayard had to fork it
+  "author": "aboodman, jmfayard", 
+  // aboodman original author of "Switch to Tab"
+  // jmfayard wanted to use the "tab" keyword, had to fork it for various reasons, then to port it to manifest_version : 2
+
   "manifest_version": 2, // was 1 before the fork
-  "version": 12, // first version that may work more or less with manifest_version 2
+  // in Google Chrome, every extension, installable web app, and theme has a JSON-formatted manifest file, named manifest.json
+  // technically this parameter is very important. Chrome and Webstore need it to understand what you put here means
+  // Read The Fine Documentation: http://developer.chrome.com/extensions/manifest.html
+  // Tutorial to migrate from 1 to 2 is here: http://developer.chrome.com/extensions/tut_migration_to_manifest_v2.html
 
-  "default_locale" : "en",
-  "permissions": ["tabs"],
+  "version": "13", 
+  // Here it's the version of this extension. Must be incremented each time the extension is uploaded to Webstore
+  // HISTORY: 
+  // v1 to v9 don't really exist, but should be considered as the work from aboodman
+  // v10 was the first uploaded to Chrome's Webstore but didn't worked because the extensino hat to be ported to manifest_version 2
+  // v11 is the missing element
+  // v12 was the first version that worked more or less with manifest_version 2, but only locally
+  // v13 aims to fix a very annoying bug that prevented to upload it to chromestore : « The manifest must define a version »
+
+  
+  "permissions": ["tabs"],  // obviously we need to access the list of your tabs so that you can find the one you cant
   "omnibox": {
-    "keyword": "tab"
+    "keyword": "tab"      // that means that you type in Chrome's Omnibx : "tab<TAB>your search terms"
   },
 
   // manifest_version 1 is not allowed anymore, and background_page is deprecated
   // Tutorial here: http://developer.chrome.com/extensions/tut_migration_to_manifest_v2.html
   "background": {
-      "scripts":["background.js"] // all the magic is in this javascript file
-  }
+      "scripts":["background.js"] // all the magic on how it works is in this javascript file
+  },
 
   //  "short_name": "__MSG_short_name__",
   // TODO: I don't get it, this key is valid according to the doc http://developer.chrome.com/extensions/manifest.html
@@ -33,4 +48,7 @@
 
   //TODO: Google says we should consider to move to an Event Page instead. Not sure if it makes sense for us http://developer.chrome.com/extensions/event_pages.html
 
+  "default_locale" : "en"
+  
+  
 }

@@ -40,5 +40,11 @@ Hence this fork.
 - Initial author : aboodman
 - Actual maintener : Jean-Michel Fayard
 - Releaser under a Free as in Freedom License (see LICENCE)
-- GitHub : https://github.com/internaciulo/search-tab-in-chrome-s-omnibox
+- Get the source luke
+  git clone https://github.com/internaciulo/search-tab-in-chrome-s-omnibox
+- Wanna contribute ? Awesome.
+  - If you want contribute source code and already know Chrome programming just go aheade
+  - If you don't know Chrome programming, no problem, I didn't either. it's not hard and it's fun. Take a look at "manifest.json" first
+  - You can translate and i18n too. Look in `_locales/en/messages.json`
+  - You can help to make it pretty too. I can't help with that, sorry :)
 
