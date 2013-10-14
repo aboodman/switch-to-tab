@@ -37,14 +37,16 @@ Hence this fork.
 
 ## Things to know
 
-- Initial author : aboodman
-- Actual maintener : Jean-Michel Fayard
+- "author": "aboodman, jmfayard", 
+  -  aboodman original author of "Switch to Tab"
+  - jmfayard wanted to use the "tab" keyword, had to fork it for various reasons, then to port it to manifest_version : 2
 - Releaser under a Free as in Freedom License (see LICENCE)
 - Get the source luke
-  git clone https://github.com/internaciulo/search-tab-in-chrome-s-omnibox
+  `git clone https://github.com/internaciulo/search-tab-in-chrome-s-omnibox`
 - Wanna contribute ? Awesome.
-  - If you want contribute source code and already know Chrome programming just go aheade
-  - If you don't know Chrome programming, no problem, I didn't either. it's not hard and it's fun. Take a look at "manifest.json" first
-  - You can translate and i18n too. Look in `_locales/en/messages.json`
+  - If you want contribute source code and already know Chrome programming just go ahead
+  - If you don't know Chrome programming, no problem, I didn't either. it's not hard and it's fun. Take a look at "manifest-with-comments.json" first
+  - You can translate and i18n too. Look in `TRANSLATORS` then `_locales/en/messages.json`
   - You can help to make it pretty too. I can't help with that, sorry :)
+
 
