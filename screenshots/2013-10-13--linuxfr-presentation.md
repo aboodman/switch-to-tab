@@ -1,6 +1,12 @@
+1. il faudra rajouter que si l'extension en question est pour Chrome, si quelqu'un souhaite repomper l'idée pour Firefox voire pour un autre navigateur, il est entièrement bienvenu
+2. il reste un paragraphe en anglais à traduire
+3. ça serait bien de rajouter une capture d'écran dans le Webstore (c'est quand même très moche sans ça). Oui mais... ça a l'air bête, je ne sais pas comment satisfaire cette règle-ci : [In the Screenshots section, upload at least one screenshot of the app (1280x800 or 640x400). Four or five would be better.](https://developers.google.com/chrome/web-store/docs/get_started_simple?hl=fr#step7). Une bonne âme pourrait-elle prendre une capture d'écran en 1280x800 ?
+4. je pense qu'il y a encore des bugs dans le formulaire que j'ai fait hier soir, quelqu'un pour confirmer ?
+
   PROJET LIBRE : SEARCH TAB IN CHROME'S OMNIBOX
   
-Chers lecteurs, je viens de mettre à disposition des utilisateurs de l'un des deux navigateurs qui compte (Google Chrome) un petit projet libre qui allait tomber dans l'oubli et auquel j'ai apporté des améliorations infinitésimales.
+Chers linuxfriens, je viens de mettre à disposition des utilisateurs des navigateurs basés sur *Blink* - en pratique c'est seulement testé sur Google Chrome - une version légèrement améliorée d'un petit projet libre qui allait tomber dans l'oubli et auquel j'ai apporté des améliorations minimales.
+  
   
 ## Scenario : les onglets c'est très bien sauf que là j'en ai ouvert trop pour mon cerveau. À l'aide. 
 
@@ -54,7 +60,7 @@ Je fais pas mal de choses sur le web et depuis que j'ai compris que mon cerveau 
   - jmfayard wanted to use the "tab" keyword, had to fork it for various reasons, then to port it to manifest_version : 2
 - Releaser under a Free as in Freedom License (see LICENCE)
 - Get the source luke
-  `git clone https://github.com/internaciulo/search-tab-in-chrome-s-omnibox`
+> git clone https://github.com/internaciulo/search-tab-in-chrome-s-omnibox`
 - Wanna contribute ? Awesome.
   - If you want contribute source code and already know Chrome programming just go ahead
   - If you don't know Chrome programming, no problem, I didn't either. it's not hard and it's fun. Take a look at "manifest-with-comments.json" first
@@ -67,3 +73,4 @@ Les chèques avec de nombreux zéros avant la virgule sont acceptés.
 
 Alternativement, ça serait très sympa de prendre quelques minutes pour remplir le formulaire ci-dessous qui me permettrait de finir un article. En gros j'ai l'intuition que l'email est un outil difficile à utiliser... y compris pour les gens qui connaissent trop bien la technologie... mais qu'en même temps il y a des solutions de bon sens à ça.
 
+Le formulaire en question : [Les technophiles au piège de l'email ?](https://docs.google.com/forms/d/1ubGd-3XgBcH91FsDVe6KKDreEUkDMK7xXpldpMkosaU/viewform)
