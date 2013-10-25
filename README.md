@@ -52,3 +52,12 @@ Hence this fork.
   - You can help to make it pretty too. I can't help with that, sorry :)
 
 
+# Feedback
+
+You have questions, suggestions, all the things that shouldn't go in a bug tracker ?
+
+Great, there is a place for that !
+
+  https://search-tab.uservoice.com/
+  
+  
