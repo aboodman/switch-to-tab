@@ -45,7 +45,9 @@ Hence this fork.
   `git clone https://github.com/internaciulo/search-tab-in-chrome-s-omnibox`
 - Wanna contribute ? Awesome.
   - If you want contribute source code and already know Chrome programming just go ahead
-  - If you don't know Chrome programming, no problem, I didn't either. it's not hard and it's fun. Take a look at "manifest-with-comments.json" first
+  - If you don't know Chrome programming, no problem, I didn't either. it's not hard and it's fun. 
+   - Take a look at `manifest-with-comments.json` first
+   - Don't modify the `manifest.json` file itself, use a tool like https://github.com/fkei/JSON.minify/issues/6 
   - You can translate and i18n too. Look in `TRANSLATORS` then `_locales/en/messages.json`
   - You can help to make it pretty too. I can't help with that, sorry :)
 
