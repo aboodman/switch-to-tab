@@ -138,18 +138,11 @@ omnibox.onInputEntered.addListener(function(url) {
 
   chrome.tabs.get(tabId, function(tab) {
     if (tab && !tab.selected) {
-      chrome.tabs.update(tabId, {
-        selected: true
+      chrome.tabs.update(tabId, { active: true },
+          function() {
+        chrome.windows.update(tab.windowId, { focused: true });
       });
     }
-
-    chrome.windows.get(tab.windowId, function(win) {
-      if (!window.focused) {
-        chrome.windows.update(tab.windowId, {
-          focused: true
-        });
-      }
-    });
   });
 });
 
