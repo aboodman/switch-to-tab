@@ -137,13 +137,17 @@ omnibox.onInputEntered.addListener(function(url) {
   });
 
   chrome.tabs.get(tabId, function(tab) {
-    if (tab && !tab.selected) {
-      chrome.tabs.update(tabId, { active: true },
-          function() {
-        chrome.windows.update(tab.windowId, { focused: true });
+    if (tab) {
+      chrome.windows.get(tab.windowId, function (window) {
+        if (!(window.focused && tab.selected)) {
+          chrome.tabs.update(tabId, { active: true }, function() {
+            chrome.windows.update(tab.windowId, { focused: true });
+          });
+        }
       });
     }
   });
+
 });
 
 omnibox.onInputCancelled.addListener(function() {
