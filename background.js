@@ -116,11 +116,16 @@ omnibox.onInputChanged.addListener(function(text, suggest) {
       };
     });
 
+    if (suggestions && suggestions.length == 1 && text.length >= 4 && (""+localStorage["autoswitch"] == "true")) {
+        tabsearch_onInputEntered(suggestions[0].content);
+        return;
+    }
+
     suggest(suggestions);
   });
 });
 
-omnibox.onInputEntered.addListener(function(url) {
+var tabsearch_onInputEntered = function(url) {
   var tabId = url.match(/#(\d+)$/);
   if (tabId)
     tabId = parseInt(tabId[1]);
@@ -148,7 +153,9 @@ omnibox.onInputEntered.addListener(function(url) {
     }
   });
 
-});
+};
+
+omnibox.onInputEntered.addListener(tabsearch_onInputEntered);
 
 omnibox.onInputCancelled.addListener(function() {
   topMatch = -1;
