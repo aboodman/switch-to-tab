@@ -20,7 +20,7 @@ https://chrome.google.com/webstore/detail/search-tab-in-chromes-omn/jcadgemecboj
 
 ## History
 
-[‘Switch to tab’](https://chrome.google.com/webstore/detail/switch-to-tab/gbfhhcljihbgcobpfnceegfmooomhhli) was the result of (aboodman](https://github.com/aboodman/switch-to-tab
+[‘Switch to tab’](https://chrome.google.com/webstore/detail/switch-to-tab/gbfhhcljihbgcobpfnceegfmooomhhli) was the result of [aboodman](https://github.com/aboodman/switch-to-tab
 )  playing around with Chromium's experimental
 omnibox API. Simple but useful idea : type "sw<tab>" in Chrome's Omnibox and you could find the tab you needed. I liked the idea a lot.
 
