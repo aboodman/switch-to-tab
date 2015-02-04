@@ -116,11 +116,16 @@ omnibox.onInputChanged.addListener(function(text, suggest) {
       };
     });
 
+    if (suggestions && suggestions.length == 1 && text.length >= 4 && (""+localStorage["autoswitch"] == "true")) {
+        tabsearch_onInputEntered(suggestions[0].content);
+        return;
+    }
+
     suggest(suggestions);
   });
 });
 
-omnibox.onInputEntered.addListener(function(url) {
+var tabsearch_onInputEntered = function(url) {
   var tabId = url.match(/#(\d+)$/);
   if (tabId)
     tabId = parseInt(tabId[1]);
@@ -137,14 +142,20 @@ omnibox.onInputEntered.addListener(function(url) {
   });
 
   chrome.tabs.get(tabId, function(tab) {
-    if (tab && !tab.selected) {
-      chrome.tabs.update(tabId, { active: true },
-          function() {
-        chrome.windows.update(tab.windowId, { focused: true });
+    if (tab) {
+      chrome.windows.get(tab.windowId, function (window) {
+        if (!(window.focused && tab.selected)) {
+          chrome.tabs.update(tabId, { active: true }, function() {
+            chrome.windows.update(tab.windowId, { focused: true });
+          });
+        }
       });
     }
   });
-});
+
+};
+
+omnibox.onInputEntered.addListener(tabsearch_onInputEntered);
 
 omnibox.onInputCancelled.addListener(function() {
   topMatch = -1;
