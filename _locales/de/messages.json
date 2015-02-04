@@ -1,6 +1,6 @@
 {
   "name": {
-    "message": "Find your Tab with tab<TAB>",
+    "message": "Finde deinen Tab mit tab<TAB>",
     "description": "This is the long name of the app in Chrome's Webstore"
   },
   "short_name": {
@@ -9,6 +9,9 @@
   },
   "description": {
     "message": "Stop wasting your time clicking on hundreds of tabs",
+    "message": "Das Leben ist zu kurz hunderte von Tabs anzuklicken",
     "description": "This is the description of the app that must declared in manifest.json"
   },
+
+
 }
