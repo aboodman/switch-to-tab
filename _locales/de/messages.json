@@ -1,20 +1,17 @@
 {
   "name": {
-    "message": "Search Tab in Chrome's Omnibox",
+    "message": "Finde deinen Tab mit tab<TAB>",
     "description": "This is the long name of the app in Chrome's Webstore"
   },
   "short_name": {
-    "message": "Search Tab",
+    "message": "tab<TAB>",
     "description": "This is the long name of the app in Chrome's Webstore"
   },
   "description": {
-    "message": "Benutze das Keyword 'tab' um in Chromes Omnibox nach geöffneten Tabs zu suchen (fork von 'switch to tab')",
+    "message": "Stop wasting your time clicking on hundreds of tabs",
+    "message": "Das Leben ist zu kurz hunderte von Tabs anzuklicken",
     "description": "This is the description of the app that must declared in manifest.json"
   },
 
 
-  "search_string": {
-    "message": "hello%20world",
-    "description": "The string we search for. Put %20 between words that go together."
-  }
 }
