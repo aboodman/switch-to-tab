@@ -30,6 +30,7 @@ function escapeRegexp(text) {
 }
 
 function parseMatches(text, search) {
+  console.log("parseMatches search=" + search + " text=" + text);
   var terms = escapeRegexp(search).split(/\s+/g);
   var termMatchCounts = [];
   terms.forEach(function() { termMatchCounts.push(0); });
@@ -74,6 +75,7 @@ function parseMatches(text, search) {
 }
 
 function formatMatches(parsed) {
+  console.log("formatMatches parsed.match=" + parsed.match + " parsed.text=" + parsed.text);
   return parsed.reduce(function(s, piece) {
     if (piece.match)
       return s + "<match>" + piece.text + "</match>";
@@ -83,6 +85,8 @@ function formatMatches(parsed) {
 }
 
 omnibox.onInputChanged.addListener(function(text, suggest) {
+  console.log("onInputChanged text=" + text + " suggest=" + suggest);
+
   text = text.toLowerCase().replace(/\W+/g, ' ').trim();
   if (!text)
     return;
@@ -126,13 +130,19 @@ omnibox.onInputChanged.addListener(function(text, suggest) {
 });
 
 var tabsearch_onInputEntered = function(url) {
+  console.log("tabsearch_onInputEntered url=" + url);
+
   var tabId = url.match(/#(\d+)$/);
-  if (tabId)
+  if (tabId) {
     tabId = parseInt(tabId[1]);
-  else if (topMatch != -1)
+    console.log("Jump to tabId=" + tabId );
+  } else if (topMatch != -1) {
+    console.log("Jump to topMatch=" + topMatch );
     tabId = topMatch;
-  else
+  } else {
+    console.log("Nothing found for url=" + url);
     return;
+  }
 
   chrome.tabs.getSelected(null, function(selected) {
     // if the selected tab was the new tab page,
@@ -160,4 +170,3 @@ omnibox.onInputEntered.addListener(tabsearch_onInputEntered);
 omnibox.onInputCancelled.addListener(function() {
   topMatch = -1;
 });
-
