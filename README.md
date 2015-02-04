@@ -1,9 +1,9 @@
-## Purpose of this Chrome's extension
+## Find your Tab with tab<TAB>
 
-Scenario : you begin to browse the web with Chrome for a while ; soon you need to go back to *that* tab but there are too many tabs to find quickly exactly the one you need. Sounds familiar ? We know, we have been there.
+**Scenario** : you begin to browse the web with Chrome for a while ; soon you need to go back to *that* tab but there are too many tabs to find quickly exactly the one you need. Sounds familiar ? We know, we have been there.
 
 Don't worry, to solve this *too many tabs* problem, there are a lot of complicated extensions that promise you that you will be able to work with hundreds of tabs : *Too Many Tabs, Tabs Outliner, Bookmark My Tabs, One Tab, TabMan Tabs Manger, Tab Manager, Project Tab Manger, 10+Tabs MASTER →Fast Speed Scroll w/LATER Tab, Resolver Tabs, Tab out, TabJump, TabCaroussel, IE Tab Multi*
- 
+
  Or you can use this chrome extension, but I'm a bit ashamed to say that it is *really simple* campared to all those sophisticated extensions.
 
 The only thing it does is that when you enter in Chrome's Omnibox **"tab<tab>"** followed by **one or many search term**, it will display a list of all open tabs that contains those search terms.
@@ -35,9 +35,20 @@ Sadly enough, after discussing with aboodman, I understood that it was not possi
 
 Hence this fork.
 
-## Things to know
+Authors
+-------
 
-- "author": "aboodman, jmfayard", 
+- [Jean-Michel Fayard](https://github.com/internaciulo/search-tab-in-chrome-s-omnibox)
+- aboodman
+- Francois Beaufort
+- Jannis
+- jeffnuss
+- lee feigenbaum
+
+Things to know
+------------
+
+- "author": "aboodman, jmfayard",
   -  aboodman original author of "Switch to Tab"
   - jmfayard wanted to use the "tab" keyword, had to fork it for various reasons, then to port it to manifest_version : 2
 - Releaser under a Free as in Freedom License (see LICENCE)
@@ -57,5 +68,3 @@ You have questions, suggestions, all the things that shouldn't go in a bug track
 Great, there is a place for that !
 
   https://search-tab.uservoice.com/
-  
-  
