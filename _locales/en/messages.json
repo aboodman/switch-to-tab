@@ -10,5 +10,5 @@
   "description": {
     "message": "Stop wasting your time clicking on hundreds of tabs",
     "description": "This is the description of the app that must declared in manifest.json"
-  },
+  }
 }

@@ -1,6 +1,13 @@
 var omnibox = chrome.omnibox;
 var topMatch;
 
+
+function _log(text) {
+  //////// comment/uncommment if you need to debug   //////////
+  //console.log(text);
+}
+
+
 function escape(text) {
   return text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
@@ -30,6 +37,7 @@ function escapeRegexp(text) {
 }
 
 function parseMatches(text, search) {
+  //console.log("parseMatches search=" + search + " text=" + text);
   var terms = escapeRegexp(search).split(/\s+/g);
   var termMatchCounts = [];
   terms.forEach(function() { termMatchCounts.push(0); });
@@ -74,6 +82,7 @@ function parseMatches(text, search) {
 }
 
 function formatMatches(parsed) {
+  //_log("formatMatches parsed.match=" + parsed.match + " parsed.text=" + parsed.text);
   return parsed.reduce(function(s, piece) {
     if (piece.match)
       return s + "<match>" + piece.text + "</match>";
@@ -83,9 +92,11 @@ function formatMatches(parsed) {
 }
 
 omnibox.onInputChanged.addListener(function(text, suggest) {
+  _log("onInputChanged text=" + text );
+
   text = text.toLowerCase().replace(/\W+/g, ' ').trim();
   if (!text)
-    return;
+    return; //FIXME : jump to last tab
 
   chrome.windows.getAll({populate: true}, function(windows) {
     topMatch = -1;
@@ -116,18 +127,30 @@ omnibox.onInputChanged.addListener(function(text, suggest) {
       };
     });
 
+    _log("onInputChanged suggestions: length=" + suggestions.length + " first=" + suggestions[0].content);
+    if (suggestions && suggestions.length == 1 && text.length >= 4 && (""+localStorage["autoswitch"] == "true")) {
+        tabsearch_onInputEntered(suggestions[0].content);
+        return;
+    }
+
     suggest(suggestions);
   });
 });
 
-omnibox.onInputEntered.addListener(function(url) {
+var tabsearch_onInputEntered = function(url) {
+  _log("tabsearch_onInputEntered url=" + url + " topMatch=" + topMatch);
+
   var tabId = url.match(/#(\d+)$/);
-  if (tabId)
+  if (tabId) {
     tabId = parseInt(tabId[1]);
-  else if (topMatch != -1)
+    _log("Jump to tabId=" + tabId );
+  } else if (topMatch != -1) {
+    _log("Jump to topMatch=" + topMatch );
     tabId = topMatch;
-  else
+  } else {
+    _log("Nothing found for url=" + url);
     return;
+  }
 
   chrome.tabs.getSelected(null, function(selected) {
     // if the selected tab was the new tab page,
@@ -137,16 +160,21 @@ omnibox.onInputEntered.addListener(function(url) {
   });
 
   chrome.tabs.get(tabId, function(tab) {
-    if (tab && !tab.selected) {
-      chrome.tabs.update(tabId, { active: true },
-          function() {
-        chrome.windows.update(tab.windowId, { focused: true });
+    if (tab) {
+      chrome.windows.get(tab.windowId, function (window) {
+        if (!(window.focused && tab.selected)) {
+          chrome.tabs.update(tabId, { active: true }, function() {
+            chrome.windows.update(tab.windowId, { focused: true });
+          });
+        }
       });
     }
   });
-});
+
+};
+
+omnibox.onInputEntered.addListener(tabsearch_onInputEntered);
 
 omnibox.onInputCancelled.addListener(function() {
   topMatch = -1;
 });
-

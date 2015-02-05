@@ -11,7 +11,7 @@
     "message": "Stop wasting your time clicking on hundreds of tabs",
     "message": "Das Leben ist zu kurz hunderte von Tabs anzuklicken",
     "description": "This is the description of the app that must declared in manifest.json"
-  },
+  }
 
 
 }
