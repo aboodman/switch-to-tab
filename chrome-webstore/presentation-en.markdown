@@ -1,3 +1,9 @@
+Update
+-----
+New name : Find your tab with tab<TAB>
+You can now jump to a tab located in another window
+
+
 Stop wasting your time clicking on hundreds of tabs!
 -------------
 
@@ -14,6 +20,8 @@ Feedback is welcome
 
 You are a also a Mozilla Firefox user ?
 Good news, **%**keyword, inclueded by default, does the same thing
+
+
 
 
 Why and How you can use this Chrome Extension
