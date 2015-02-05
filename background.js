@@ -1,6 +1,13 @@
 var omnibox = chrome.omnibox;
 var topMatch;
 
+
+function _log(text) {
+  //////// comment/uncommment if you need to debug   //////////
+  //console.log(text);
+}
+
+
 function escape(text) {
   return text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
@@ -75,7 +82,7 @@ function parseMatches(text, search) {
 }
 
 function formatMatches(parsed) {
-  //console.log("formatMatches parsed.match=" + parsed.match + " parsed.text=" + parsed.text);
+  //_log("formatMatches parsed.match=" + parsed.match + " parsed.text=" + parsed.text);
   return parsed.reduce(function(s, piece) {
     if (piece.match)
       return s + "<match>" + piece.text + "</match>";
@@ -85,7 +92,7 @@ function formatMatches(parsed) {
 }
 
 omnibox.onInputChanged.addListener(function(text, suggest) {
-  console.log("onInputChanged text=" + text );
+  _log("onInputChanged text=" + text );
 
   text = text.toLowerCase().replace(/\W+/g, ' ').trim();
   if (!text)
@@ -120,7 +127,7 @@ omnibox.onInputChanged.addListener(function(text, suggest) {
       };
     });
 
-    console.log("onInputChanged suggestions: length=" + suggestions.length + " first=" + suggestions[0].content);
+    _log("onInputChanged suggestions: length=" + suggestions.length + " first=" + suggestions[0].content);
     if (suggestions && suggestions.length == 1 && text.length >= 4 && (""+localStorage["autoswitch"] == "true")) {
         tabsearch_onInputEntered(suggestions[0].content);
         return;
@@ -131,17 +138,17 @@ omnibox.onInputChanged.addListener(function(text, suggest) {
 });
 
 var tabsearch_onInputEntered = function(url) {
-  console.log("tabsearch_onInputEntered url=" + url + " topMatch=" + topMatch);
+  _log("tabsearch_onInputEntered url=" + url + " topMatch=" + topMatch);
 
   var tabId = url.match(/#(\d+)$/);
   if (tabId) {
     tabId = parseInt(tabId[1]);
-    console.log("Jump to tabId=" + tabId );
+    _log("Jump to tabId=" + tabId );
   } else if (topMatch != -1) {
-    console.log("Jump to topMatch=" + topMatch );
+    _log("Jump to topMatch=" + topMatch );
     tabId = topMatch;
   } else {
-    console.log("Nothing found for url=" + url);
+    _log("Nothing found for url=" + url);
     return;
   }
 
