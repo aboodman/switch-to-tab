@@ -30,7 +30,7 @@ function escapeRegexp(text) {
 }
 
 function parseMatches(text, search) {
-  console.log("parseMatches search=" + search + " text=" + text);
+  //console.log("parseMatches search=" + search + " text=" + text);
   var terms = escapeRegexp(search).split(/\s+/g);
   var termMatchCounts = [];
   terms.forEach(function() { termMatchCounts.push(0); });
@@ -75,7 +75,7 @@ function parseMatches(text, search) {
 }
 
 function formatMatches(parsed) {
-  console.log("formatMatches parsed.match=" + parsed.match + " parsed.text=" + parsed.text);
+  //console.log("formatMatches parsed.match=" + parsed.match + " parsed.text=" + parsed.text);
   return parsed.reduce(function(s, piece) {
     if (piece.match)
       return s + "<match>" + piece.text + "</match>";
@@ -85,11 +85,11 @@ function formatMatches(parsed) {
 }
 
 omnibox.onInputChanged.addListener(function(text, suggest) {
-  console.log("onInputChanged text=" + text + " suggest=" + suggest);
+  console.log("onInputChanged text=" + text );
 
   text = text.toLowerCase().replace(/\W+/g, ' ').trim();
   if (!text)
-    return;
+    return; //FIXME : jump to last tab
 
   chrome.windows.getAll({populate: true}, function(windows) {
     topMatch = -1;
@@ -120,6 +120,7 @@ omnibox.onInputChanged.addListener(function(text, suggest) {
       };
     });
 
+    console.log("onInputChanged suggestions: length=" + suggestions.length + " first=" + suggestions[0].content);
     if (suggestions && suggestions.length == 1 && text.length >= 4 && (""+localStorage["autoswitch"] == "true")) {
         tabsearch_onInputEntered(suggestions[0].content);
         return;
@@ -130,7 +131,7 @@ omnibox.onInputChanged.addListener(function(text, suggest) {
 });
 
 var tabsearch_onInputEntered = function(url) {
-  console.log("tabsearch_onInputEntered url=" + url);
+  console.log("tabsearch_onInputEntered url=" + url + " topMatch=" + topMatch);
 
   var tabId = url.match(/#(\d+)$/);
   if (tabId) {
