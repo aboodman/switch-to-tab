@@ -1,6 +1,6 @@
 {
   "name": {
-    "message": "Encuentre su pestaña (tab) facilmente con tab<TAB>"
+    "message": "Encuentre su pestaña (tab) facilmente con tab<TAB>",
     "description": "This is the long name of the app in Chrome's Webstore"
   },
   "short_name": {
@@ -8,7 +8,7 @@
     "description": "This is the long name of the app in Chrome's Webstore"
   },
   "description": {
-    "message": "No malgaste mas su tiempo tratando de encontrar esa pestaña perdida entre las otras"
+    "message": "No malgaste mas su tiempo tratando de encontrar esa pestaña perdida entre las otras",
     "description": "This is the description of the app that must declared in manifest.json"
   }
 }
