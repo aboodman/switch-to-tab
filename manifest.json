@@ -3,7 +3,7 @@
     "description": "__MSG_description__",
     "author": "aboodman, jmfayard",
     "manifest_version": 2,
-    "version": "16",
+    "version": "17",
     "permissions": [
         "tabs"
     ],
