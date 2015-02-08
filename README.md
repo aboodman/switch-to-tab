@@ -1,8 +1,8 @@
-- Install :  **[Find your Tab with tab&lt;TAB&gt; in Chrome's Webstore](https://chrome.google.com/webstore/detail/search-tab-in-chromes-omn/jcadgemecbojhfgpnbgakadhbmibflnd)**
+- Install :  **[tabtabtab in Chrome's Webstore](https://chrome.google.com/webstore/detail/search-tab-in-chromes-omn/jcadgemecbojhfgpnbgakadhbmibflnd)**
 - Fork https://github.com/internaciulo/search-tab-in-chrome-s-omnibox ... also [pull requests](https://github.com/jmfayard/search-tab-in-chrome-s-omnibox/pulls) and [issues](https://github.com/jmfayard/search-tab-in-chrome-s-omnibox/issues)
 - Contributors: [jmfayard (maintainer)](https://github.com/jmfayard) [aboodman](https://github.com/aboodman) [beaufortfrancois](https://github.com/beaufortfrancois) [j-koenig](https://github.com/j-koenig) [jeffnuss](https://github.com/jeffnuss) [lee-feigenbaum](https://github.com/lee-feigenbaum) [katogarabato](https://github.com/katogarabato)
 
-## Find your Tab with tab<TAB>
+## tabtabtab for Chrome : Stop wasting your time finding your Tabs
 
 **Scenario** : you begin to browse the web with Chrome for a while ; soon you need to go back to *that* tab but there are too many tabs to find quickly exactly the one you need. Sounds familiar ? We know, we have been there.
 
