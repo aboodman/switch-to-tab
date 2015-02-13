@@ -6,7 +6,7 @@
 
 - [Screencast on Youtube](https://www.youtube.com/watch?v=2zMJ9-bx46Y)
 - Install :  **[tabtabtab in Chrome's Webstore](https://chrome.google.com/webstore/detail/search-tab-in-chromes-omn/jcadgemecbojhfgpnbgakadhbmibflnd)**
-- Fork https://github.com/internaciulo/search-tab-in-chrome-s-omnibox ... also [pull requests](https://github.com/jmfayard/search-tab-in-chrome-s-omnibox/pulls) and [issues](https://github.com/jmfayard/search-tab-in-chrome-s-omnibox/issues)
+- Fork https://github.com/jmfayard/chrome-tabtabtab ... also [pull requests](https://github.com/jmfayard/chrome-tabtabtab/pulls) and [issues](https://github.com/jmfayard/chrome-tabtabtab/issues)
 - Contributors: [jmfayard (maintainer)](https://github.com/jmfayard) [aboodman](https://github.com/aboodman) [beaufortfrancois](https://github.com/beaufortfrancois) [j-koenig](https://github.com/j-koenig) [jeffnuss](https://github.com/jeffnuss) [lee-feigenbaum](https://github.com/lee-feigenbaum) [katogarabato](https://github.com/katogarabato)
 
 ## Scenario
