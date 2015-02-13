@@ -1,10 +1,10 @@
 {
   "name": {
-    "message": "Encuentre su pestaña (tab) facilmente con tab<TAB>",
+    "message": "TabTab Search",
     "description": "This is the long name of the app in Chrome's Webstore"
   },
   "short_name": {
-    "message": "tabtabtab",
+    "message": "TabTab Search",
     "description": "This is the long name of the app in Chrome's Webstore"
   },
   "description": {

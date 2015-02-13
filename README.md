@@ -1,4 +1,4 @@
-# Tabtabtab for Chrome : Life is too short, tabs too many. Search, don't click!
+# TabTab Search for Chrome : Life is too short, tabs too many. Search, don't click!
 
 ## TL;DR
 
@@ -6,7 +6,7 @@
 
 - [Screencast on Youtube](https://www.youtube.com/watch?v=2zMJ9-bx46Y)
 - Install :  **[tabtabtab in Chrome's Webstore](https://chrome.google.com/webstore/detail/search-tab-in-chromes-omn/jcadgemecbojhfgpnbgakadhbmibflnd)**
-- Fork https://github.com/jmfayard/chrome-tabtabtab ... also [pull requests](https://github.com/jmfayard/chrome-tabtabtab/pulls) and [issues](https://github.com/jmfayard/chrome-tabtabtab/issues)
+- Fork https://github.com/jmfayard/tabtab-search ... also [pull requests](https://github.com/jmfayard/tabtab-search/pulls) and [issues](https://github.com/jmfayard/tabtab-search/issues)
 - Contributors: [jmfayard (maintainer)](https://github.com/jmfayard) [aboodman](https://github.com/aboodman) [beaufortfrancois](https://github.com/beaufortfrancois) [j-koenig](https://github.com/j-koenig) [jeffnuss](https://github.com/jeffnuss) [lee-feigenbaum](https://github.com/lee-feigenbaum) [katogarabato](https://github.com/katogarabato)
 
 ## Scenario
@@ -39,4 +39,9 @@ Contribute
 - Fork and make pull requests to https://github.com/internaciulo/search-tab-in-chrome-s-omnibox
 - Never developed a chrome extension yet? Dive in it, it's quite fun. Head over to https://developer.chrome.com/extensions
 - You can translate and i18n too. Look in `TRANSLATORS` then `_locales/en/messages.json`
+
+
+
+Release with `git archive -o ../tabtab-search-latest.zip HEAD *js *json *html  _locales`
+
 
