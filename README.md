@@ -1,11 +1,17 @@
+# Tabtabtab for Chrome : Life is too short, tabs too many. Search, don't click!
+
+## TL;DR
+
+![demo](assets/tabtabtab-big.gif)
+
 - [Screencast on Youtube](https://www.youtube.com/watch?v=2zMJ9-bx46Y)
 - Install :  **[tabtabtab in Chrome's Webstore](https://chrome.google.com/webstore/detail/search-tab-in-chromes-omn/jcadgemecbojhfgpnbgakadhbmibflnd)**
 - Fork https://github.com/internaciulo/search-tab-in-chrome-s-omnibox ... also [pull requests](https://github.com/jmfayard/search-tab-in-chrome-s-omnibox/pulls) and [issues](https://github.com/jmfayard/search-tab-in-chrome-s-omnibox/issues)
 - Contributors: [jmfayard (maintainer)](https://github.com/jmfayard) [aboodman](https://github.com/aboodman) [beaufortfrancois](https://github.com/beaufortfrancois) [j-koenig](https://github.com/j-koenig) [jeffnuss](https://github.com/jeffnuss) [lee-feigenbaum](https://github.com/lee-feigenbaum) [katogarabato](https://github.com/katogarabato)
 
-## tabtabtab for Chrome : Stop wasting your time finding your Tabs
+## Scenario
 
-**Scenario** : you begin to browse the web with Chrome for a while ; soon you need to go back to *that* tab but there are too many tabs to find quickly exactly the one you need. Sounds familiar ? We know, we have been there.
+Tou begin to browse the web with Chrome for a while ; soon you need to go back to *that* tab but there are too many tabs to find quickly exactly the one you need. Sounds familiar ? We know, we have been there.
 
 Don't worry, to solve this *too many tabs* problem, there are a lot of complicated extensions that promise you that you will be able to work with hundreds of tabs : *Too Many Tabs, Tabs Outliner, Bookmark My Tabs, One Tab, TabMan Tabs Manger, Tab Manager, Project Tab Manger, 10+Tabs MASTER →Fast Speed Scroll w/LATER Tab, Resolver Tabs, Tab out, TabJump, TabCaroussel, IE Tab Multi*
 
