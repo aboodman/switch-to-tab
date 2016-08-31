@@ -1,8 +1,0 @@
-'Switch to tab' is the result of playing around with Chromium's experimental
-omnibox API.
-
-Enter "sw<tab>" followed by a search term to begin using Switch to Tab. You can
-enter multiple keywords separated by space.
-
-Upon pressing enter, the extension will select the first match and switch to
-that tab, so one need not type press down if the first match is desired.

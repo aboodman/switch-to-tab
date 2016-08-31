@@ -1,0 +1,32 @@
+How can Chrome extension, theme, webapp to appear in all the languages of the world
+
+The reference for that magic is here  http://developer.chrome.com/extensions/i18n.html
+
+
+WHAT DO THAT MEAN FOR YOU AS A TRANSLATOR ?
+
+Say you want to translate the extension to the esperanto language
+
+1. You should know what its code language is : {eo} 
+If you don't, look here https://developers.google.com/chrome/web-store/docs/i18n?hl=fr&csw=1#localeTable
+Actually esperanto is not allowed yet, but never mind, the principle is the same
+
+2. Duplicate _locales/eo/messages.json into _locales/eo/messages.json
+
+3. Edit _locales/eo/messages.json
+Each time you see something like this:
+  "search_string": {
+    "message": "hello world",
+    "description": "The string we search for. Put %20 between words that go together."
+  }
+
+Translate like this
+  "search_string": {
+    "message": "saluton mundo",
+    "description": "The string we search for. Put %20 between words that go together."
+  }
+
+Have fun :-)
+
+4. Don't forget to send this file translated in esperanto of course
+

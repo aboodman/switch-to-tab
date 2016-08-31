@@ -1,10 +1,20 @@
 {
-  "name": "Switch to Tab",
-  "description": "Use the omnibox to search your tabs!",
-  "version": "3",
-  "permissions": ["tabs"],
-  "omnibox": {
-    "keyword": "sw"
-  },
-  "background_page": "background.html"
+    "name": "__MSG_name__",
+    "description": "__MSG_description__",
+    "author": "aboodman, jmfayard",
+    "manifest_version": 2,
+    "version": "18",
+    "permissions": [
+        "tabs"
+    ],
+    "options_page": "options.html",
+    "omnibox": {
+        "keyword": "tab"
+    },
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "default_locale": "en"
 }

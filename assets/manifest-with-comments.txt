@@ -1,0 +1,66 @@
+{
+  // Comments are not allowed in .json files 
+  // But it's useful to keep comments within your json files before they go in the wind
+  // 
+  // So here is what I did
+  // 1. Install node and npm
+  // 2. Install mjson like this:  npm install -g mjson
+  //
+  // Then each time the manifest-with comments is modified:
+  // $ mjson.js -f -s manifest-with-comments.txt -o manifest.json
+  
+  "name": "__MSG_name__", // {en}: "Search Tab in Chrome's Omnibox" 
+  "description": "__MSG_description__",
+
+  //NOTE: everything that looks like __MSG_some_thing__  is a string that can be translated in _locales/xx/messages.json
+  //TRANSLATORS look for explanations in the file named "TRANSLATORS" 
+
+  "author": "aboodman, jmfayard", 
+  // aboodman original author of "Switch to Tab"
+  // jmfayard wanted to use the "tab" keyword, had to fork it for various reasons, then to port it to manifest_version : 2
+
+  "manifest_version": 2, // was 1 before the fork
+  // in Google Chrome, every extension, installable web app, and theme has a JSON-formatted manifest file, named manifest.json
+  // technically this parameter is very important. Chrome and Webstore need it to understand what you put here means
+  // Read The Fine Documentation: http://developer.chrome.com/extensions/manifest.html
+  // Tutorial to migrate from 1 to 2 is here: http://developer.chrome.com/extensions/tut_migration_to_manifest_v2.html
+
+  "version": "15", 
+  // Here it's the version of this extension. Must be incremented each time the extension is uploaded to Webstore
+  // HISTORY: 
+  // v1 to v9 don't really exist, but should be considered as the work from aboodman
+  // v10 was the first uploaded to Chrome's Webstore but didn't worked because the extensino hat to be ported to manifest_version 2
+  // v11 is the missing element
+  // v12 was the first version that worked more or less with manifest_version 2, but only locally
+  // v13 aimed to fix a very annoying bug that prevented to upload it to chromestore : « The manifest must define a version »
+  // v14 "Comments are not allowed in JSON. Oh my..."
+  // v15 Merge a patch from François Beaufort. Thanks !
+
+  
+  "permissions": ["tabs"],  // obviously we need to access the list of your tabs so that you can find the one you cant
+  "omnibox": {
+    "keyword": "tab"      // that means that you type in Chrome's Omnibx : "tab<TAB>your search terms"
+  },
+
+  // manifest_version 1 is not allowed anymore, and background_page is deprecated
+  // Tutorial here: http://developer.chrome.com/extensions/tut_migration_to_manifest_v2.html
+  "background": {
+      "scripts":["background.js"] // all the magic on how it works is in this javascript file
+  },
+
+  //  "short_name": "__MSG_short_name__",
+  // TODO: I don't get it, this key is valid according to the doc http://developer.chrome.com/extensions/manifest.html
+  //but Chrome keep saying : Unrecognized manifest key 'short_name'.
+
+  // TODO: it would be great to have an icon. But it would looks weird if *I* do the icon.
+  //"icons": {
+  //  "16": "16-full-color.png"
+  //},
+  
+
+  //TODO: Google says we should consider to move to an Event Page instead. Not sure if it makes sense for us http://developer.chrome.com/extensions/event_pages.html
+
+  "default_locale" : "en"
+  
+  
+}

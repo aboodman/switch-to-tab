@@ -1,0 +1,14 @@
+{
+  "name": {
+    "message": "TabTab Search",
+    "description": "This is the long name of the app in Chrome's Webstore"
+  },
+  "short_name": {
+    "message": "TabTab Search",
+    "description": "This is the long name of the app in Chrome's Webstore"
+  },
+  "description": {
+    "message": "Encuentra rápidamente cualquier pestaña de entre la montaña habitual de pestañas",
+    "description": "This is the description of the app that must declared in manifest.json"
+  }
+}
