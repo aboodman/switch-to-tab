@@ -1,4 +1,3 @@
-<script>
 var omnibox = chrome.omnibox;
 var topMatch;
 
@@ -157,4 +156,3 @@ omnibox.onInputEntered.addListener(function(url) {
 omnibox.onInputCancelled.addListener(function() {
   topMatch = -1;
 });
-</script>

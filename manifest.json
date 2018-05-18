@@ -1,10 +1,14 @@
 {
+  "manifest_version": 2,
   "name": "Switch to Tab",
   "description": "Use the omnibox to search your tabs!",
-  "version": "3",
+  "version": "1",
   "permissions": ["tabs"],
   "omnibox": {
     "keyword": "sw"
   },
-  "background_page": "background.html"
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  }
 }
