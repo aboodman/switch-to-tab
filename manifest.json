@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Switch to Tab",
   "description": "Use the omnibox to search your tabs!",
-  "version": "1",
+  "version": "4",
   "permissions": ["tabs"],
   "omnibox": {
     "keyword": "sw"
